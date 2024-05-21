@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapAiryDistributionFP64", "MapAiryDistributionFP64\MapAiryDistributionFP64.csproj", "{F08C7437-4462-4E12-A00A-74CDEFDE1496}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapAiryDistributionFP64Tests", "MapAiryDistributionFP64Tests\MapAiryDistributionFP64Tests.csproj", "{8F505090-6C38-4C43-AAAA-6263DE57400C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F08C7437-4462-4E12-A00A-74CDEFDE1496} = {F08C7437-4462-4E12-A00A-74CDEFDE1496}
+	EndProjectSection
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MapAiryDistributionFP64ErrorVis", "MapAiryDistributionFP64ErrorVis\MapAiryDistributionFP64ErrorVis.pyproj", "{BCDCB51A-5870-4170-9E93-E645CEB9F8E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F08C7437-4462-4E12-A00A-74CDEFDE1496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08C7437-4462-4E12-A00A-74CDEFDE1496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08C7437-4462-4E12-A00A-74CDEFDE1496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08C7437-4462-4E12-A00A-74CDEFDE1496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F505090-6C38-4C43-AAAA-6263DE57400C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F505090-6C38-4C43-AAAA-6263DE57400C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F505090-6C38-4C43-AAAA-6263DE57400C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F505090-6C38-4C43-AAAA-6263DE57400C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDCB51A-5870-4170-9E93-E645CEB9F8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDCB51A-5870-4170-9E93-E645CEB9F8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6EDEC61-517B-4A71-9FE1-9F8CCF5B18A1}
+	EndGlobalSection
+EndGlobal
