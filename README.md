@@ -1,7 +1,7 @@
 # MapAiryDistributionFP64
- MapAiryDistribution Double Precision Implement
+ MapAiry Distribution Double Precision Implement
  
-## Landau Distribution
+## MapAiry Distribution
 See: [MapAiryDistribution](https://github.com/tk-yoshimura/MapAiryDistribution)  
 Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura/DoubleDoubleStatistic)  
 
