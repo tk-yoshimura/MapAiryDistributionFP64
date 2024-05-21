@@ -9,6 +9,7 @@ using System.Diagnostics;
 using static System.Double;
 
 namespace MapAiryDistributionFP64 {
+    [DebuggerDisplay("{ToString(),nq}")]
     public class MapAiryDistribution {
 
         public double Mu { get; }
