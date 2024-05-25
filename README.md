@@ -7,6 +7,7 @@ Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura
 
 ## Double Precision (IEEE 754) Approx
 [C# code](MapAiryDistributionFP64/MapAiryDistribution.cs)  
+[C++ code](MapAiryDistributionFP64_CPP/mapairy_distribution.hpp)  
 
 ## Error
 
