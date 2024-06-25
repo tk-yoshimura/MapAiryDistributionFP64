@@ -851,13 +851,13 @@ double mapairy_quantile_upper(double x) {
         2.77611385768697969181e-5,
         3.45911046256304795257e-6,
     };
-    static const vector<double> pade_upper_expm32_48_numer = {
-        5.41926070139289008291e-1,
-        6.93835278521566240557e-1,
+    static const vector<double> pade_upper_expm32_40_numer = {
+        5.41926070139289008213e-1,
+        8.91529653594533651218e-1,
     };
-    static const vector<double> pade_upper_expm32_48_denom = {
+    static const vector<double> pade_upper_expm32_40_denom = {
         1.00000000000000000000e0,
-        1.28031352753196139513e0,
+        1.64511305640894427558e0,
     };
 
     assert(x <= 0.5);
@@ -889,8 +889,8 @@ double mapairy_quantile_upper(double x) {
         else if (exponent >= -32) {
             v = pade(-log2(ldexp(x, 16)), pade_upper_expm16_32_numer, pade_upper_expm16_32_denom);
         }
-        else if (exponent >= -48) {
-            v = pade(-log2(ldexp(x, 32)), pade_upper_expm32_48_numer, pade_upper_expm32_48_denom);
+        else if (exponent >= -40) {
+            v = pade(-log2(ldexp(x, 32)), pade_upper_expm32_40_numer, pade_upper_expm32_40_denom);
         }
         else {
             v = 1 / cbrt(ldexp(pi, 1));
