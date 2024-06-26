@@ -88,7 +88,7 @@ namespace MapAiryDistributionFP64 {
 
             return v;
         }
-        
+
         public bool Symmetric => false;
 
         public double Median => Mu + median_base * C;

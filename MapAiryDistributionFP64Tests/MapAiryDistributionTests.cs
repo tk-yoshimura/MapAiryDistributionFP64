@@ -1,7 +1,4 @@
-﻿using DoubleDouble;
-using DoubleDoubleStatistic.SampleStatistic;
-using DoubleDoubleStatistic.Utils;
-using MapAiryDistributionFP64;
+﻿using MapAiryDistributionFP64;
 
 namespace MapAiryDistributionFP64Tests {
     [TestClass()]
