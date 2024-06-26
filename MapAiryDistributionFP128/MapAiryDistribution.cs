@@ -3,6 +3,7 @@
 // Original Code: https://github.com/tk-yoshimura/MapAiryDistributionFP64
 
 using MapAiryDistributionFP128.InternalUtils;
+using MapAiryDistributionFP128.RandomGeneration;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using Float128 = MultiPrecision.MultiPrecision<MultiPrecision.Pow2.N4>;
@@ -16,6 +17,10 @@ namespace MapAiryDistributionFP128 {
         public Float128 C { get; }
 
         private readonly Float128 c_inv;
+
+        private static readonly Float128 mode_base = "-1.1615872711359706852500000803029112987";
+        private static readonly Float128 median_base = "-0.71671068545502205331700196278067230944440";
+        private static readonly Float128 entropy_base = "2.0072768184106563460003025875575283708";
 
         public MapAiryDistribution() : this(mu: 0d, c: 1d) { }
 
@@ -71,6 +76,34 @@ namespace MapAiryDistributionFP128 {
 
             return x;
         }
+
+        public double Sample(Random random) {
+            double u = random.NextUniformOpenInterval01() - 0.5d;
+            double w = random.NextUniformOpenInterval0();
+
+            double cu = double.CosPi(u);
+
+            double r = -double.SinPi(u * 1.5d - 0.25d) * double.Cbrt(2d * double.Log(w) / (double.CosPi(u * 0.5d - 0.25d) * cu * cu));
+            double v = r * (double)C + (double)Mu;
+
+            return v;
+        }
+
+        public bool Symmetric => false;
+
+        public Float128 Median => Mu + median_base * C;
+
+        public Float128 Mode => Mu + mode_base * C;
+
+        public Float128 Mean => Mu;
+
+        public Float128 Variance => Float128.NaN;
+
+        public Float128 Skewness => Float128.NaN;
+
+        public Float128 Kurtosis => Float128.NaN;
+
+        public Float128 Entropy => entropy_base + Float128.Log(C);
 
         public Float128 Alpha => 1.5d;
 
