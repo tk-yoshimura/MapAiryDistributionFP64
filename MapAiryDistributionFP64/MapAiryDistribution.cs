@@ -1058,17 +1058,6 @@ namespace MapAiryDistributionFP64 {
                 ])
             );
 
-            private static readonly (ReadOnlyCollection<double> numer, ReadOnlyCollection<double> denom) pade_upper_expm32_40 = new(
-                new ReadOnlyCollection<double>([
-                    5.41926070139289008213e-1,
-                    8.91529653594533651218e-1,
-                ]),
-                new ReadOnlyCollection<double>([
-                    1.00000000000000000000e0,
-                    1.64511305640894427558e0,
-                ])
-            );
-
             private static readonly (ReadOnlyCollection<double> numer, ReadOnlyCollection<double> denom) pade_lower_0p125_0p25 = new(
                 new ReadOnlyCollection<double>([
                     -2.18765177572396469657e0,
@@ -1357,9 +1346,6 @@ namespace MapAiryDistributionFP64 {
                     }
                     else if (exponent >= -32) {
                         v = ApproxUtil.Pade(-Log2(ScaleB(x, 16)), pade_upper_expm16_32);
-                    }
-                    else if (exponent >= -40) {
-                        v = ApproxUtil.Pade(-Log2(ScaleB(x, 32)), pade_upper_expm32_40);
                     }
                     else {
                         v = 1d / Cbrt(ScaleB(Pi, 1));

@@ -889,9 +889,6 @@ double mapairy_quantile_upper(double x) {
         else if (exponent >= -32) {
             v = pade(-log2(ldexp(x, 16)), pade_upper_expm16_32_numer, pade_upper_expm16_32_denom);
         }
-        else if (exponent >= -40) {
-            v = pade(-log2(ldexp(x, 32)), pade_upper_expm32_40_numer, pade_upper_expm32_40_denom);
-        }
         else {
             v = 1 / cbrt(ldexp(pi, 1));
         }

@@ -1661,17 +1661,6 @@ namespace MapAiryDistributionFP128 {
                 ])
             );
 
-            private static readonly (ReadOnlyCollection<Float128> numer, ReadOnlyCollection<Float128> denom) pade_upper_expm64_80 = new(
-                new ReadOnlyCollection<Float128>([
-                    "5.41926070139289008744561364829636726045e-1",
-                    "6.93835278521566241490361334534449190958e-1",
-                ]),
-                new ReadOnlyCollection<Float128>([
-                    1,
-                    "1.28031352753196139716655771101726385264e0",
-                ])
-            );
-
             private static readonly (ReadOnlyCollection<Float128> numer, ReadOnlyCollection<Float128> denom) pade_lower_0p125_0p25 = new(
                 new ReadOnlyCollection<Float128>([
                     "-2.18765177572396470161180571018467019660e0",
@@ -2294,9 +2283,6 @@ namespace MapAiryDistributionFP128 {
                     }
                     else if (exponent >= -64) {
                         v = ApproxUtil.Pade(-Float128.Log2(Float128.Ldexp(x, 32)), pade_upper_expm32_64);
-                    }
-                    else if (exponent >= -80) {
-                        v = ApproxUtil.Pade(-Float128.Log2(Float128.Ldexp(x, 64)), pade_upper_expm64_80);
                     }
                     else {
                         v = 1d / Float128.Cbrt(Float128.Ldexp(Float128.PI, 1));
