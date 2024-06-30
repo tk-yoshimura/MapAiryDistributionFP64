@@ -97,7 +97,7 @@ namespace MapAiryDistributionFP128 {
 
         public Float128 Mean => Mu;
 
-        public Float128 Variance => Float128.NaN;
+        public Float128 Variance => Float128.PositiveInfinity;
 
         public Float128 Skewness => Float128.NaN;
 
