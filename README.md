@@ -40,6 +40,10 @@ Double-Double Precision: [DoubleDoubleStatistic](https://github.com/tk-yoshimura
 If anyone would like to use some of the code in this repository, please contact me with an Issue and let me know.  
 [Issue](https://github.com/tk-yoshimura/MapAiryDistributionFP64/issues)
 
+## Report
+[ResearchGate](https://www.researchgate.net/publication/382138858_Numerical_Evaluation_and_High_Precision_Approximation_Formula_for_Map-Airy_Distribution)  
+[TechRxiv](https://www.techrxiv.org/users/661998/articles/1146038-numerical-evaluation-and-high-precision-approximation-formula-for-map-airy-distribution)  
+
 ## Author
 
 [T.Yoshimura](https://github.com/tk-yoshimura)

@@ -1,6 +1,8 @@
 // Author and Approximation Formula Coefficient Generator: T.Yoshimura
 // Github: https://github.com/tk-yoshimura
 // Original Code: https://github.com/tk-yoshimura/MapAiryDistributionFP64
+// Yoshimura, T., "Numerical Evaluation and High Precision Approximation Formula for Map-Airy Distribution", June 2024.
+// https://www.researchgate.net/publication/382138858_Numerical_Evaluation_and_High_Precision_Approximation_Formula_for_Map-Airy_Distribution
 // C++20 implement
 
 #pragma once
